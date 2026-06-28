@@ -75,15 +75,13 @@ class MainActivity : AppCompatActivity() {
         if (query.isEmpty()) {
             showStatus("الرجاء كتابة كلمة للبحث ⚠️", isError = true)
         } else if (!isNetworkAvailable()) {
-            // فحص فوري وسريع للشبكة: إذا لم يتوفر إنترنت تظهر الرسالة فوراً بمنتصف الشاشة دون أي انتظار!
             showStatus("لا يوجد اتصال بالإنترنت! يرجى التحقق من الشبكة 🌐", isError = true)
         } else {
             fetchYoutubeVideos(query)
         }
     }
 
-    // دالة احترافية لفحص توفر الإنترنت في نظام الأندرويد بشكل لحظي وفوري
-    // دالة احترافية ومحمية تماماً من الانهيار (Crash) لفحص توفر الإنترنت
+
     private fun isNetworkAvailable(): Boolean {
         return try {
             val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -96,7 +94,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         } catch (e: Exception) {
-            // في حال حدوث أي استثناء أو نقص في الإذن، نرجع true ليعمل البحث الافتراضي لـ Retrofit دون أي إغلاق للتطبيق!
             true
         }
     }

@@ -10,7 +10,6 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- حقل إدخال البحث العصري - مضاف له هامش علوي كافٍ للأمان -->
     <EditText
         android:id="@+id/etSearchQuery"
         android:layout_width="0dp"
@@ -30,7 +29,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnSearch" />
 
-    <!-- زر بحث مطور AppCompatButton لضمان دقة الألوان والاستجابة السريعة للنقر مع هامش علوي ممتاز -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSearch"
         android:layout_width="wrap_content"
@@ -46,7 +44,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- مؤشر تحميل مخصص بلون زهري ناعم -->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
@@ -58,7 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- نص الحالة الفخم في منتصف الشاشة لعرض الأخطاء والرسائل بدقة متناهية -->
     <TextView
         android:id="@+id/tvErrorStatus"
         android:layout_width="0dp"
@@ -75,7 +71,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnSearch" />
 
-    <!-- قائمة عرض الفيديوهات المصممة لتدعم الحواف الدائرية والـ CardViews -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvVideos"
         android:layout_width="0dp"
